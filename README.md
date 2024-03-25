@@ -1,6 +1,6 @@
-#WEB 340 Node.js
+# WEB 340 Node.js
 
-##Contributors
+## Contributors
 
-*Dustin Craven
-*Richard Krasso
+* Dustin Craven
+* Richard Krasso
