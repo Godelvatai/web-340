@@ -1,0 +1,10 @@
+{
+    "name": "distance-calculator",
+    "version": "1.0.0",
+    "description": "A calculator for distance between planets in AU.",
+    "main": "distance-calculator.js",
+    "scripts": {
+        "test": "node test/distance-calculator.spec.js"
+    },
+    "dependencies": {}
+}
