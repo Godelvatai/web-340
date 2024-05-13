@@ -18,7 +18,7 @@ function testPerformAction() {
     //Event listener for 'action' event
     superhero.on("action", action => {
       console.log(`Superhero performed action: ${action}`);
-    })
+    });
     superhero.performAction("fly");
     console.log("Passed testPerformAction");
     return true;
@@ -34,7 +34,7 @@ function testEncounterDanger() {
     //Event listener for 'danger' event
     superhero.on("danger", danger => {
       console.log(`Superhero encountered danger: ${danger}`);
-    })
+    });
     superhero.encounterDanger("fire");
     console.log("Passed testEncounterDanger");
     return true;
@@ -50,7 +50,7 @@ function testGiveHelp() {
     //Event listener for 'help' event
     superhero.on("help", help => {
       console.log(`Superhero helped: ${help}`);
-    })
+    });
     superhero.performAction("Mary Jane");
     console.log("Passed testGiveHelp");
     return true;
