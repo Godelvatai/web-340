@@ -28,7 +28,6 @@ function getCharacters(callback) {
 */
 
 // For promises:
-/*
 const fs = require('fs').promises;
 
 async function createCharacter(character) {
@@ -38,9 +37,8 @@ async function createCharacter(character) {
 async function getCharacters() {
   // TODO: Implement this function
 }
-*/
 
 // Uncomment the appropriate exports depending on whether you're using callbacks or promises:
 
 // module.exports = { createCharacter, getCharacters }; // For callbacks
-// module.exports = { createCharacter, getCharacters }; // For promises
+module.exports = { createCharacter, getCharacters }; // For promises

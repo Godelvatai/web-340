@@ -14,7 +14,7 @@
 // const fs = require('fs');
 
 // For promises:
-// const fs = require('fs').promises;
+const fs = require('fs').promises;
 
 describe("Character Creation Module", () => {
   let createCharacter;
