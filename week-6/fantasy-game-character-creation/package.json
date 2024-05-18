@@ -6,8 +6,12 @@
   "directories": {
     "test": "test"
   },
+  "jest": {
+
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "set PORT=3000 && node src/server.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
