@@ -2,7 +2,7 @@
  * Author:      Dustin Craven
  * Date:        5/18/24
  * File Name:   character-creator.js
- * Description: .
+ * Description: Character creation system utilizing Node.js's stream module.
  */
 "use strict";
 

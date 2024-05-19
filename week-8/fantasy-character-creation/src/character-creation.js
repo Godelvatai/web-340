@@ -1,44 +1,35 @@
+/**
+ * Author:      Dustin Craven
+ * Date:        5/18/24
+ * File Name:   character-creation.js
+ * Description: Character creation system utilizing Node.js's fs module.
+ */
 "use strict";
 
-/*
- * This file allows you to choose between using callbacks or promises (async/await) for handling asynchronous operations.
- *
- * If you want to use callbacks:
- * 1. Uncomment the 'fs' require statement under the "For callbacks" comment.
- * 2. Uncomment the 'createCharacter' and 'getCharacters' functions under the "For callbacks" comment.
- * 3. Uncomment the 'module.exports' line under the "For callbacks" comment.
- *
- * If you want to use promises (async/await):
- * 1. Uncomment the 'fs' require statement under the "For promises" comment.
- * 2. Uncomment the 'createCharacter' and 'getCharacters' functions under the "For promises" comment.
- * 3. Uncomment the 'module.exports' line under the "For promises" comment.
- */
+const { readFile, writeFile } = require('fs').promises;
+const { join } = require('path');
+const CHARACTERS_FILE = join(__dirname, "characters.txt");
 
-// For callbacks:
-/*
-const fs = require('fs');
+async function createCharacter(characters) {
+  //
+  try {
+    const data = characters.join("\n");
 
-function createCharacter(character, callback) {
-  // TODO: Implement this function
-}
-
-function getCharacters(callback) {
-  // TODO: Implement this function
-}
-*/
-
-// For promises:
-const fs = require('fs').promises;
-
-async function createCharacter(character) {
-  // TODO: Implement this function
+    await writeFile(CHARACTERS_FILE, data);
+  } catch(err) {
+    throw(err);
+  }
 }
 
 async function getCharacters() {
-  // TODO: Implement this function
+  //
+  try {
+    const data = await readFile(CHARACTERS_FILE, "utf8");
+    const characters = data.split("\n").filter(character => character);
+    return characters;
+  } catch(err) {
+    throw(err);
+  }
 }
 
-// Uncomment the appropriate exports depending on whether you're using callbacks or promises:
-
-// module.exports = { createCharacter, getCharacters }; // For callbacks
-module.exports = { createCharacter, getCharacters }; // For promises
+module.exports = { createCharacter, getCharacters };
